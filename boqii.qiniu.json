@@ -1,0 +1,9 @@
+{
+  "src_dir": "/Users/bq-dn-zj-486/testvue/mengchong",
+  "bucket": "h5-images",
+  "overwrite": true,
+  "ak": "sYZeTVmmEEyVkWKeKf4sqnVlGNhIcAk_zGAEUqgO",
+  "sk": "_TLO3Huiv64jRIf_HRu5oE9DhnzQSflCByGMrn-Q",
+  "key_prefix": "mengchong/",
+  "rescan_local": true
+}

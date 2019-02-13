@@ -1,0 +1,73 @@
+@import url(~normalize.css);
+@import url(~@/assets/css/iconfont.css);
+@import url(~@/assets/scss/material-icons.scss);
+@import url(~swiper/dist/css/swiper.min.css);
+@import url(./mixins.scss);
+html, body {
+  height: 100%;
+  font-size:0.14rem;
+  // overflow-x:hidden;
+  &::-webkit-scrollbar {
+    display: none;
+}
+}
+li{
+    list-style: none;
+}
+input {
+    outline:none;
+    background:transparent;
+    border:none;
+    outline:medium;
+}
+*:focus {
+    outline: none;
+    background-color: transparent;
+}
+::selection{background:transparent; }
+::-moz-selection{background:transparent; }
+
+.flex{
+  display: flex;
+  &-col{
+    flex-direction: column;
+  }
+  &-row{
+    flex-direction: row;
+  }
+  &-center{
+    justify-content: center;
+    align-items: center;
+  }
+  &-vcenter{
+    align-items: center;
+  }
+  &-acenter{
+    justify-content: center;
+  }
+}
+.boqii-confirm-btn{
+  color: #efbb78;
+  &:active{
+    color: #f59a25;
+  }
+}
+.clearfix {
+    overflow: auto;
+}
+.ico-card{
+    width:.12rem;
+    min-width: 10px;
+    height: .12rem;
+    min-height: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../../assets/images/ico-card.png) no-repeat;
+    background-size: 100% 100%;
+    margin-right: 2px;
+    margin-bottom: 4px;
+}
+.ico-card.black{
+    background: url(../../assets/images/ico-blackcard.png) no-repeat;
+    background-size: 100% 100%;
+}

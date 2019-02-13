@@ -1,0 +1,279 @@
+﻿@mixin placeholder($color) {
+    ::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: $color;
+    }
+
+    :-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: $color;
+    }
+
+    ::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: $color;
+    }
+
+    :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: $color;
+    }
+}
+
+.page {
+    // overflow-x: hidden;
+    // // overflow-y: scroll;
+    // min-height: 100vh;
+}
+
+.boqii-btn_outer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.64rem;
+    z-index: 999;
+    background: #fff;
+    -webkit-box-shadow: 0px -0.01px 0.08rem #ECF0EB;
+    box-shadow: 0px -0.01px 0.08rem #ECF0EB;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.btn-footer_outer {
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  z-index: 9999;
+  width: 100%;
+  height: .64rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+  padding: 0 .13rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  .btn-able {
+    color: #C9A17F;
+    font-size: .18rem;
+    font-weight: 600;
+    border: 1px solid #C9A17F;
+  }
+  .btn-disable {
+    color: rgb(208, 208, 208);
+    border: 1px solid rgb(208, 208, 208);
+  }
+  .btn-footer {
+    height: .45rem;
+    border-radius: .22rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+}
+.boqii-btn {
+    background-image: linear-gradient(-97deg, #F0D2AD 0%, #CFA56A 75%, #C08F43 100%);
+    border-radius: 100px;
+    // width: 3.5rem;
+    width: 100%;
+    height: 0.44rem;
+    font-size: 0.18rem;
+    color: #FFFFFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.buy-blackcard {
+    @include placeholder(#C1C1C1);
+
+    .recharge-active {
+        .recharge-money {
+            @include placeholder(#C9A17F);
+        }
+    }
+}
+
+.card-authrize {
+    $color: #999999;
+    @include placeholder($color);
+}
+
+
+.tips-box {
+    margin-top: .07rem;
+    padding: 0 .12rem 0 .15rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 28px;
+
+    .tip-icon {
+        width: 12px;
+        height: 12px;
+        border: 1px solid #999999;
+        border-radius: 50%;
+        color: #999999;
+        font-size: 12px;
+        line-height: 17px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    .tip-info {
+        font-size: 12px;
+        -webkit-transform: scale(.83) translate(-.18rem, -15px);
+                transform: scale(.83) translate(-.18rem, -15px);
+        position: absolute;
+        text-align: left;
+        line-height: 14px;
+        width: 106%;
+    }
+}
+
+.border-1px {
+    position: relative;
+
+    &:after {
+        content: " ";
+        position: absolute;
+        left: .13rem;
+        bottom: 0;
+        right: 0;
+        height: 1px;
+        border-bottom: 1px solid #DEDEDE;
+        color: #DEDEDE;
+    }
+}
+
+.border-1px_tab {
+    position: relative;
+
+    &:after {
+        content: " ";
+        position: absolute;
+        left: .14rem;
+        bottom: 0;
+        right: 0.14rem;
+        height: 2px;
+        border-bottom: 2px solid #F55B50;
+        color: #F55B50;
+    }
+}
+
+.boqii__close-btn {
+    width: 0.36rem;
+    height: 0.36rem;
+    border-radius: 50%;
+    border: 0.01rem solid #fff;
+    position: absolute;
+    bottom: -0.61rem;
+    left: 1.245rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    .boqii__close-sticker {
+        width: 0.26rem;
+        height: 0.01rem;
+        background: #fff;
+        position: relative;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 0.01rem;
+            height: 0.26rem;
+            background: #fff;
+            left: 0.125rem;
+            top: -0.125rem;
+        }
+    }
+}
+
+.com-headBanner {
+    .swiper-pagination {
+
+        &.swiper-pagination-bullets {
+            bottom: -.44rem !important;
+            width: 100%;
+        }
+
+        .swiper-pagination-bullet {
+            width: .05rem;
+            height: .05rem;
+            background: #EDDBB3;
+            opacity: 1;
+            margin: 0 3px !important;
+
+            &.swiper-pagination-bullet-active {
+                background: #EDDBB3;
+                opacity: 1;
+                width: .15rem;
+                border-radius: 3px;
+            }
+        }
+    }
+}
+.content_wraper {
+    background: #fff;
+    min-height: 100vh;
+  }
+  .btn-short {
+    width: 2.36rem;
+    height: 0.38rem;
+    background-image: linear-gradient(-97deg, #f0d2ad 0%, #cfa56a 75%, #c08f43 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.16rem;
+    border-radius: 0.38rem;
+    margin: 0.2rem 0;
+    color: #ffffff;
+    font-weight: 500;
+  }
