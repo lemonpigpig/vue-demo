@@ -1,21 +1,24 @@
 <template>
-  <div>
-    <h1>
+  <div class="mock">
+    <h2>
       利用node express lowdb mock get post delete put 真实的假数据 哈哈哈
-    </h1>
+    </h2>
     <h3>
       posts list show
     </h3>
     <ul>
       <li v-for="(item, index) in postsList" :key="index">
         <div>
-          <span style="font-size:24px;color:red">title</span>: {{item.title}}
+          <span style="font-size:18px;color:red">id</span>: {{item.id}}
         </div>
         <div>
-          <span style="font-size:24px;color:red">name</span>: {{item.name}}
+          <span style="font-size:18px;color:red">title</span>: {{item.title}}
         </div>
         <div>
-          <input type="text" placeholder="点我修改名字" v-model="item.name">
+          <span style="font-size:18px;color:red">name</span>: {{item.name}}
+        </div>
+        <div>
+          <input type="text" placeholder="点我修改名字" v-model="item.name" style="font-size:18px">
           <input type="button" value="确定" @click="fupdatePostById(item.id, item.name)">
           <input type="button" value="删除" @click="fdelete(item.id)">
         </div>
@@ -26,8 +29,8 @@
       get post item data by id: {{id}}
     </h3>
     <div>
-      <input type="text" v-model="id" placeholder="请输入id的值">
-      <input type="button" value="点击获取" @click="fgetPostById()">
+      <input type="text" v-model="id" placeholder="请输入id的值" style="font-size:18px">
+      <input type="button" value="点击获取" @click="fgetPostById()" class="btn">
       <div>
         the getted post item is {{postObj && JSON.stringify(postObj)}}
       </div>
@@ -35,12 +38,20 @@
     <h3>
       随机添加post 项目
     </h3>
-    <input type="button" value="add" @click="fadd">
+    <input type="button" value="add" @click="fadd" class="btn">
   </div>
 </template>
 <style>
-* {
+*.mock {
   text-align: left;
+  padding: 20px;
+}
+.btn {
+  width: 80px;
+  height: 30px;
+  border: 1px solid #f2f2f2;
+  text-align: center;
+  font-size: 14px;
 }
 </style>
 
