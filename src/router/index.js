@@ -10,6 +10,7 @@ import testDebounce from '@/pages/testDebounce'
 
 import es6 from '@/pages/es6'
 import promise from '@/pages/promise'
+import mock from '@/pages/mock'
 
 Vue.use(Router)
 
@@ -49,6 +50,10 @@ export default new Router({
     {
       path: '/promise',
       component: promise
+    },
+    {
+      path: '/mock',
+      component: mock
     }
   ]
 })

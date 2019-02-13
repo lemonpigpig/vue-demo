@@ -59,27 +59,36 @@ class HttpService {
         timeout: 15000
       }
       let instance = axios.create(options)
+      if (method === 'post') {
+        instance.defaults.headers['Content-Type'] =
+          'application/json;charset=UTF-8'
+      } else {
+        instance.defaults.headers['Content-Type'] =
+          'application/x-www-form-urlencoded'
+      }
       instance[method](`${url}`, data)
         .then(
           function(res) {
-            if (res.data.ResponseStatus !== 0) {
-              if (isSelfHandler) {
-                reject(res.data)
-              } else {
-                if (
-                  res.data.ResponseStatus == 422 ||
-                  res.data.ResponseStatus == 500 ||
-                  res.data.ResponseStatus === -1 ||
-                  res.data.ResponseStatus === 10001 ||
-                  res.data.ResponseStatus === 1000
-                ) {
-                  console.log('---err----', err)
-                }
-                reject(res.data)
-              }
-            } else {
-              resolve(res.data)
-            }
+            console.log('--httpservice data----:', typeof data)
+            resolve(res.data)
+            // if (res.data.ResponseStatus !== 0) {
+            //   if (isSelfHandler) {
+            //     reject(res.data)
+            //   } else {
+            //     if (
+            //       res.data.ResponseStatus == 422 ||
+            //       res.data.ResponseStatus == 500 ||
+            //       res.data.ResponseStatus === -1 ||
+            //       res.data.ResponseStatus === 10001 ||
+            //       res.data.ResponseStatus === 1000
+            //     ) {
+            //       console.log('---err----', err)
+            //     }
+            //     reject(res.data)
+            //   }
+            // } else {
+            //   resolve(res.data)
+            // }
           },
           function(err) {
             reject(err)
