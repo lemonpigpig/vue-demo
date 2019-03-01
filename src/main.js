@@ -7,13 +7,13 @@ import router from './router'
 import '@/assets/weui.css'
 import '@/assets/variable.scss'
 
-import 'boqii-modal'
+// import 'boqii-modal'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+    el: '#app',
+    router,
+    components: { App },
+    template: '<App/>'
 })

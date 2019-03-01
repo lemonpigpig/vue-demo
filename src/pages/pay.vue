@@ -13,26 +13,26 @@
 </template>
 
 <script>
-import BoqiiPay from 'boqii-pay';
+    // import BoqiiPay from 'boqii-pay';
 
-export default {
-  data () {
-    return {
-      test: 12
+    export default {
+        data() {
+            return {
+                test: 12
+            }
+        },
+        methods: {
+            fbuy() {
+                BoqiiPay.init({
+                    env: 'production'
+                })
+            },
+            fpay() {
+                BoqiiPay.checkout()
+            }
+        },
+        mounted() {
+            this.fbuy()
+        }
     }
-  },
-  methods: {
-    fbuy () {
-      BoqiiPay.init({
-        env: 'production'
-      })
-    },
-    fpay () {
-      BoqiiPay.checkout()
-    }
-  },
-  mounted () {
-    this.fbuy()
-  }
-}
 </script>
