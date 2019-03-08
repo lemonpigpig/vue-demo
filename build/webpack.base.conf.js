@@ -21,7 +21,7 @@ const createLintingRule = () => ({
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
-  entry: ['babel-polyfill', './src/main.js'],
+  entry: ['@babel/polyfill', './src/main.js'],
   // entry: './src/main.js',
   output: {
     path: config.build.assetsRoot,
@@ -57,7 +57,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            plugins: ['transform-runtime']
+            plugins: ['@babel/plugin-transform-runtime']
           }
         }
       },
