@@ -140,6 +140,7 @@ export default {
     //     alert('---mounted---')
     let c = new C(1, 2)
     console.log(Object.keys(C.prototype))
+    console.log('---c.a----:', c.a)
     this.way1()
     this.way2()
   }
